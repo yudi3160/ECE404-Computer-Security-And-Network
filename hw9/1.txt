@@ -1,0 +1,40 @@
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+DROP       all  --  ee220cpc1.ecn.purdue.edu  anywhere            
+DROP       all  --  ee220cpc2.ecn.purdue.edu  anywhere            
+DROP       all  --  ee220cpc3.ecn.purdue.edu  anywhere            
+DROP       all  --  ee220cpc4.ecn.purdue.edu  anywhere            
+DROP       all  --  ee220cpc5.ecn.purdue.edu  anywhere            
+DROP       icmp --  anywhere             anywhere             icmp echo-request
+ACCEPT     tcp  --  poole.ecn.purdue.edu  anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  wadsworth.ecn.purdue.edu  anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  jarvis.ecn.purdue.edu  anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  jeeves.ecn.purdue.edu  anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  lurch.ecn.purdue.edu  anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  alfred.ecn.purdue.edu  anywhere             tcp dpt:ssh
+REJECT     tcp  --  anywhere             anywhere             tcp dpt:ssh reject-with icmp-port-unreachable
+ACCEPT     tcp  --  pal-nat186-47-211.itap.purdue.edu  anywhere             tcp dpt:http
+REJECT     tcp  --  anywhere             anywhere             tcp dpt:http reject-with icmp-port-unreachable
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:auth
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere  
+
+
+
+Chain PREROUTING (policy ACCEPT)
+target     prot opt source               destination         
+DNAT       tcp  --  anywhere             ubuntu-linux.shared  tcp dpt:8005 to:10.211.55.3:22
+
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain POSTROUTING (policy ACCEPT)
+target     prot opt source               destination    

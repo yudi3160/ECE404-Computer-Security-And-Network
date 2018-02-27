@@ -1,0 +1,25 @@
+sudo tcpdump -vnn -c 10 'src 10.186.32.3'tcpdump: listening on eno16777736, link-type EN10MB (Ethernet), capture size 262144 bytes
+19:10:16.596994 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.40965 > 128.46.75.61.80: Flags [S], cksum 0xf964 (correct), seq 0, win 8192, length 0
+19:10:16.601172 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.65322 > 128.46.75.61.80: Flags [S], cksum 0x9a3f (correct), seq 0, win 8192, length 0
+19:10:16.605095 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.64833 > 128.46.75.61.80: Flags [S], cksum 0x9c28 (correct), seq 0, win 8192, length 0
+19:10:16.608664 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.2806 > 128.46.75.61.80: Flags [S], cksum 0x8e74 (correct), seq 0, win 8192, length 0
+19:10:16.617604 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.57311 > 128.46.75.61.80: Flags [S], cksum 0xb98a (correct), seq 0, win 8192, length 0
+19:10:16.622260 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.20519 > 128.46.75.61.80: Flags [S], cksum 0x4943 (correct), seq 0, win 8192, length 0
+19:10:16.635310 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.5894 > 128.46.75.61.80: Flags [S], cksum 0x8264 (correct), seq 0, win 8192, length 0
+19:10:16.644248 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.1390 > 128.46.75.61.80: Flags [S], cksum 0x93fc (correct), seq 0, win 8192, length 0
+19:10:16.653503 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.49971 > 128.46.75.61.80: Flags [S], cksum 0xd636 (correct), seq 0, win 8192, length 0
+19:10:16.660647 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    10.186.32.3.21732 > 128.46.75.61.80: Flags [S], cksum 0x4486 (correct), seq 0, win 8192, length 0
+10 packets captured
+10 packets received by filter
+0 packets dropped by kernel
+
